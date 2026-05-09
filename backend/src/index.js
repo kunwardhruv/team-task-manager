@@ -15,7 +15,7 @@ app.use('/api/tasks', require('./routes/tasks'));
 app.use('/api/users', require('./routes/users'));
 
 // Serve React frontend in production
-const publicPath = path.join(__dirname, '../../public');
+const publicPath = path.join(__dirname, '../public');
 app.use(express.static(publicPath));
 app.get('*', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));
